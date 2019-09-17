@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Reto1ADW/src/main/java"/>
+	<classpathentry kind="src" path="Reto1ADW/src/test/java"/>
+	<classpathentry kind="lib" path="Reto1ADW/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="Reto1ADW/bin/main"/>
+</classpath>
