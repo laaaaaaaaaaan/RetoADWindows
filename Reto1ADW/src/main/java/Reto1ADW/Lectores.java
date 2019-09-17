@@ -9,19 +9,22 @@ import java.io.IOException;
 public class Lectores {
 
 	public static void leerArchivotxt (String archivo) throws IOException {
+		
 		String cadena;
 		FileReader lector = new  FileReader(archivo);
 		BufferedReader lector2 = new BufferedReader(lector);
+		
 		while((cadena = lector2.readLine())!=null) {
 			System.out.println(cadena);
 		}
-		lector2.close();
+		lector2.close();		
 	}
 		
 	/*public static void leerArchivosDoc() {
 		
 		File file = null;
         WordExtractor extractor = null;
+        
         try
         {
 
