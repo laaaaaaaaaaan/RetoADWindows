@@ -11,7 +11,7 @@ public class Launcher {
 		
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);;
 		lecturaTxt.funcionDeLectorDeTxt(archivoTxt);;
-		lecturaXml.main(args);
+		lecturaXml.funcionDeLectorDeXML();
 	}
 
 }

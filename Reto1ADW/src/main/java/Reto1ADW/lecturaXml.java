@@ -15,8 +15,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class lecturaXml {
 
-	public static void main(String[] args) {
-try {
+	public static void funcionDeLectorDeXML() {
+		
+		try {
     		
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
