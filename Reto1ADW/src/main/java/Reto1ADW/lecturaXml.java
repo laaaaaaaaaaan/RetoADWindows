@@ -1,102 +1,50 @@
 package Reto1ADW;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import org.xml.sax.Attributes;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 public class lecturaXml {
 
-	public static void funcionDeLectorDeXML() {
+	public static void funcionDeLectorDeXML(String archivo) {
 		
 		try {
-    		
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser saxParser = factory.newSAXParser();
 
-            DefaultHandler handler = new DefaultHandler() 
-            {
+			File stocks = new File(archivo);
+			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+			Document doc = dBuilder.parse(stocks);
+			doc.getDocumentElement().normalize();
 
-                boolean bNombre = false;
-                boolean bUsername = false;
-                boolean bPassword = false;
+			System.out.println( doc.getDocumentElement().getNodeName());
+			NodeList nodes = doc.getElementsByTagName("empleado");
+			System.out.println("==========================");
 
-                public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException 
-                {
-                	System.out.println("inicia elemento:" + qName);
-            		if (qName.equalsIgnoreCase("empleado")) 
-            		{
-            			String id = attributes.getValue("id");
-            			System.out.println("id: " + id);
-            		}
-					            		
-					if (qName.equalsIgnoreCase("nombre")) 
-					{
-					    bNombre = true;
-					}
-					
-					if (qName.equalsIgnoreCase("username")) 
-					{
-					    bUsername = true;
-					}
+			for (int i = 0; i < nodes.getLength(); i++) {
+			Node node = nodes.item(i);
 
-					if (qName.equalsIgnoreCase("password")) 
-					{
-					        bUsername = true;
-					}
-				}
-					
-					public void endElement(String uri, String localName, String qName) throws SAXException 
-					{
-					    System.out.println("finaliza elemento:" + qName);
-					}
-					
-					public void characters(char ch[], int start, int length) throws SAXException 
-					{
-					    if (bNombre) 
-					    {
-					        System.out.println("nombre: " + new String(ch, start, length));
-					        bNombre = false;
-					    }
-					
-					    if (bUsername) 
-					    {
-					    	System.out.println("username: " + new String(ch, start, length));
-					    	bUsername = false;
-					    }
-					
-					    if (bPassword) 
-					    {
-					    	System.out.println("password: " + new String(ch, start, length));
-					        bPassword = false;
-				        }
-				    }
-					
-			};
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+			Element element = (Element) node;
+			System.out.println("nombre: " + getValue("nombre", element));
+			System.out.println("nombre de usuario: " + getValue("username", element));
+			System.out.println("contraseña: " + getValue("password", element));
+			}
+			}
+			} catch (Exception ex) {
+			ex.printStackTrace();
+			}
+			}
 
-				File file = new File("C:\\workspace\\RetoADWindows\\Reto1ADW/datos.xml");
-				InputStream inputStream = new FileInputStream(file);
-				Reader reader = new InputStreamReader(inputStream, "UTF-8");
-				
-				InputSource is = new InputSource(reader);
-				is.setEncoding("UTF-8");
-	            saxParser.parse(is, handler);
-	
-		        } 
-    	catch (Exception e) 
-    	{
-    		e.printStackTrace();
-		}
-    }
+			private static String getValue(String tag, Element element) {
+			NodeList nodes = element.getElementsByTagName(tag).item(0).getChildNodes();
+			Node node = (Node) nodes.item(0);
+			return node.getNodeValue();
+			}
+
 
 	}
-
 
