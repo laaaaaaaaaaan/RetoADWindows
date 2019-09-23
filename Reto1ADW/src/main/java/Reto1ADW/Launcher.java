@@ -6,9 +6,9 @@ public class Launcher {
 
 	public static void main(String[] args)throws IOException {
 		
-		String archivoCsv = "C:\\workspace\\RetoADWindows\\Reto1ADW/ArchivoCSV.csv";
-		String archivoTxt = "C:\\workspace\\RetoADWindows\\Reto1ADW/ArchivoTxt.txt";
-		String archivoXml = "C:\\workspace\\RetoADWindows\\Reto1ADW/datos.xml";
+		String archivoCsv = "ArchivoCSV.csv";
+		String archivoTxt = "ArchivoTxt.txt";
+		String archivoXml = "datos.xml";
 		
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);;
 		lecturaTxt.funcionDeLectorDeTxt(archivoTxt);;
