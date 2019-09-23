@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 public class lecturaTxt {
 	
-	public static void funcionDeLectorDeTxt(String archivo) {
+	public static boolean funcionDeLectorDeTxt(String archivo) {	
 		// Fichero del que queremos leer
 				File fichero = new File(archivo);
 				Scanner s = null;
-
+ 
 				try {
 					// Leemos el contenido del fichero
 					//System.out.println("... Leemos el contenido del fichero ...");
@@ -24,12 +24,14 @@ public class lecturaTxt {
 					{
 						String linea = s.nextLine(); 	// Guardamos la linea en un String
 						System.out.println(linea);      // Imprimimos la linea
+						return true;
 					}
 
 				} 
 				catch (Exception ex) 
 				{
 					System.out.println("Mensaje: " + ex.getMessage());
+					return false;
 				} 
 				finally
 				{
@@ -41,10 +43,11 @@ public class lecturaTxt {
 						} catch (Exception ex2) 
 					{
 						System.out.println("Mensaje 2: " + ex2.getMessage());
+						return false;
 					}
 				}
+				return false;
 			}
-	
 	}
 
 	

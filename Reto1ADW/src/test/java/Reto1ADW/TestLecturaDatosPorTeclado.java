@@ -1,8 +1,10 @@
 package Reto1ADW;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
-import org.junit.AfterClass;
+import java.util.Scanner;
+
 import org.junit.Test;
 
 public class TestLecturaDatosPorTeclado {
