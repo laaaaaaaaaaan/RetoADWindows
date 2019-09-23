@@ -9,7 +9,7 @@ public class Launcher {
 		String archivoCsv = "ArchivoCSV.csv";
 		String archivoTxt = "ArchivoTxt.txt";
 		String archivoXml = "datos.xml";
-		
+		LectorDatosPorTeclado.LectorDeAlfabetico();
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);;
 		lecturaTxt.funcionDeLectorDeTxt(archivoTxt);;
 		lecturaXml.funcionDeLectorDeXML(archivoXml);
