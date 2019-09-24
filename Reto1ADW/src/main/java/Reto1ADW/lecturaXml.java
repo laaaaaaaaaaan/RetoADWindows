@@ -10,7 +10,7 @@ import org.w3c.dom.NodeList;
 
 public class lecturaXml {
 
-	public static void funcionDeLectorDeXML(String archivo) {
+	public static boolean funcionDeLectorDeXML(String archivo) {
 		
 		try {
 
@@ -32,11 +32,13 @@ public class lecturaXml {
 			System.out.println("nombre: " + getValue("nombre", element));
 			System.out.println("nombre de usuario: " + getValue("username", element));
 			System.out.println("contraseña: " + getValue("password", element));
+			return true;
 			}
 			}
 			} catch (Exception ex) {
 			ex.printStackTrace();
 			}
+			return false;
 			}
 
 			private static String getValue(String tag, Element element) {
