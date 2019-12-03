@@ -1,0 +1,6 @@
+EMPLEADOS
+-----------------------------------------------------------------------
+Id : 3
+Nombre : Lander
+Nombre Del Usuario :LAGUEADO
+Contraseña : 534534
