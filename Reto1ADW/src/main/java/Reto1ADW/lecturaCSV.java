@@ -12,7 +12,7 @@ public class lecturaCSV {
 	public static boolean funcionesDeLectorCsv(String archivo)  throws IOException 
 	{
 		
-		BufferedReader br = null;
+BufferedReader br = null;
 		
 		try 
 		{     
