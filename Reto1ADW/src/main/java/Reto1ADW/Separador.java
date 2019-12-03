@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Separador {
 
-	public static ArrayList<String[]> separador(String lineas[],String separador) {
+	public ArrayList<String[]> separador(String lineas[],String separador) {
 		ArrayList<String[]> arrayList = new ArrayList<String[]>();
 		String[] lineasGuardadas =null;
 		for(int i=0;i<lineas.length;i++) {		

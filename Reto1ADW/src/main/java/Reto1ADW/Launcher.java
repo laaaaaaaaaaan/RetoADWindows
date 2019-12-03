@@ -7,17 +7,22 @@ public class Launcher {
 
 	public static void main(String[] args)throws IOException {
 		
+		Binario binario = new Binario();
+		PasarHexadecimal pH = new PasarHexadecimal();
+		Separador sep = new Separador();
 		String[] lineasEnviadas = {"alosha,Olefir,18,Lander Haz Algo","Lander,Arellano,28,Alosha Haz Algo"};
-	/*	String archivoCsv = "ficheros"+ File.separator+"ArchivoCSV.csv";
+	/*	String archivoCsv = "ficheros"+ File.separLectorDeTxt(archivoTxt);
+		lecturaXml.funcionDeLator+"ArchivoCSV.csv";
 		String archivoTxt =  "ficheros"+ File.separator+"ArchivoTxt.txt";
 		String archivoXml =  "ficheros"+ File.separator+"datos.xml";
 		LectorDatosPorTeclado.LectorDeAlfabetico();
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);
-		lecturaTxt.funcionDeLectorDeTxt(archivoTxt);
-		lecturaXml.funcionDeLectorDeXML(archivoXml);
+		lecturaTxt.funcionDeectorDeXML(archivoXml);
 		EscritorTxt.funcionDeEscrituraDeXML(archivoXml);*/
 		
-		Separador.separador(lineasEnviadas,",");
-		PasarHexadecimal.CambiarAHexadecimal(128949);
+		sep.separador(lineasEnviadas,",");
+		pH.CambiarAHexadecimal(128949);
+		System.out.println("\n"+binario.obtenerBinario(258));
+		
 	}
 }

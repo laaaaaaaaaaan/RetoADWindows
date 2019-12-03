@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PasarHexadecimal {
 
-	public static void CambiarAHexadecimal(int numero) {
+	public void CambiarAHexadecimal(int numero) {
 		
 		int resto,aux=numero;
 		char digitosH[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
@@ -20,7 +20,7 @@ public class PasarHexadecimal {
 		System.out.println("\n");
 		System.out.println("El numero hexadecimal es : "+hexadecimal2+" y el numero es decimal  : "+getDecimal(hexadecimal2));
 	}
-	public static int getDecimal(String hex){  
+	public int getDecimal(String hex){  
 	    String digits = "0123456789ABCDEF";  
 	    hex = hex.toUpperCase();  
 	    int val = 0;  
