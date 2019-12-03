@@ -28,11 +28,11 @@ public class lecturaXml {
 			Node node = nodes.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
-			Element element = (Element) node;
-			System.out.println("nombre: " + getValue("nombre", element));
-			System.out.println("nombre de usuario: " + getValue("username", element));
-			System.out.println("contraseña: " + getValue("password", element));
-			
+				Element element = (Element) node;
+				System.out.println("nombre: " + getValue("nombre", element));
+				System.out.println("nombre de usuario: " + getValue("username", element));
+				System.out.println("contraseña: " + getValue("password", element));
+				
 			}
 			}
 			return true;

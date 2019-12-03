@@ -21,11 +21,12 @@ BufferedReader br = null;
 			
 			while (null!=line) 
 			{
-				String [] fields = line.split(SEPARATOR);
+				String [] fields = line.split(";");
 				System.out.println(Arrays.toString(fields));
 				/*fields = removeTrailingQuotes(fields);
 				System.out.println(Arrays.toString(fields));*/
 				line = br.readLine();
+			
 				return true;
 			}
    
