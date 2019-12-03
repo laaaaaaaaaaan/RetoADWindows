@@ -4,18 +4,19 @@ import java.util.ArrayList;
 
 public class Separador {
 
-	public static ArrayList<String> separador(String lineas[],String separador) {
-		ArrayList<String> arrayList = new ArrayList<String>();//El Error esta AQUI!!!!!!!!!
+	public static ArrayList<String[]> separador(String lineas[],String separador) {
+		ArrayList<String[]> arrayList = new ArrayList<String[]>();
 		String[] lineasGuardadas =null;
 		for(int i=0;i<lineas.length;i++) {		
 			lineasGuardadas=lineas[i].split(separador);	
-			arrayList.add(lineasGuardadas[i]);
-			//Hay que redimensionar el arrayList para que el arraylist guarde la información del 
-			//Array .
+			arrayList.add(lineasGuardadas);
+			
 		} 
 		
 		for(int k = 0;k<arrayList.size();k++) {
-			System.out.println("1 : es  "+arrayList.get(k));
+			for(int j = 0;j<arrayList.get(k).length;j++) {
+				System.out.println(k+" : es  "+arrayList.get(k)[j]);
+			}
 		}
 		
 		return arrayList;

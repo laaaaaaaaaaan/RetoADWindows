@@ -18,5 +18,6 @@ public class Launcher {
 		EscritorTxt.funcionDeEscrituraDeXML(archivoXml);*/
 		
 		Separador.separador(lineasEnviadas,",");
+		PasarHexadecimal.CambiarAHexadecimal(128949);
 	}
 }
