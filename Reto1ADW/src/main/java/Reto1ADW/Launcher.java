@@ -15,6 +15,8 @@ public class Launcher {
 		lecturaTxt.funcionDeLectorDeTxt(archivoTxt);
 		lecturaXml.funcionDeLectorDeXML(archivoXml);
 		
+		EscritorXML.escritorXML(archivoXml);
+		
 	}
  
 }
