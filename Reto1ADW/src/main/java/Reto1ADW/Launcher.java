@@ -10,7 +10,7 @@ public class Launcher {
 		Binario binario = new Binario();
 		PasarHexadecimal pH = new PasarHexadecimal();
 		Separador sep = new Separador();
-		String[] lineasEnviadas = {"alosha,Olefir,18,Lander Haz Algo","Lander,Arellano,28,Alosha Haz Algo"};
+		String[] lineasEnviadas = {"alosha,Olefir,18,Lander Haz Algo","Lander,Arellano,23,Alosha Haz Algo"};
 	/*	String archivoCsv = "ficheros"+ File.separLectorDeTxt(archivoTxt);
 		lecturaXml.funcionDeLator+"ArchivoCSV.csv";
 		String archivoTxt =  "ficheros"+ File.separator+"ArchivoTxt.txt";
@@ -22,7 +22,7 @@ public class Launcher {
 		
 		sep.separador(lineasEnviadas,",");
 		pH.CambiarAHexadecimal(128949);
-		System.out.println("\n"+binario.obtenerBinario(258));
+		System.out.println("\n"+binario.obtenerBinario(218));
 		
 	}
 }
