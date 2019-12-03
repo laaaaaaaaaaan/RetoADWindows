@@ -9,6 +9,7 @@ public class Launcher {
 		
 		Binario binario = new Binario();
 		PasarHexadecimal pH = new PasarHexadecimal();
+		Octal octal = new Octal();
 		Separador sep = new Separador();
 		String[] lineasEnviadas = {"alosha,Olefir,18,Lander Haz Algo","Lander,Arellano,28,Alosha Haz Algo"};
 	/*	String archivoCsv = "ficheros"+ File.separLectorDeTxt(archivoTxt);
@@ -22,6 +23,7 @@ public class Launcher {
 		
 		sep.separador(lineasEnviadas,",");
 		pH.CambiarAHexadecimal(128949);
+		octal.formatoOctal();
 		System.out.println("\n"+binario.obtenerBinario(258));
 		
 	}
