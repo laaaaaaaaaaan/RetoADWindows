@@ -2,5 +2,5 @@ EMPLEADOS
 -----------------------------------------------------------------------
 Id : 3
 Nombre : Lander
-Nombre Del Usuario :LAGUEADO
+Nombre Del Usuario :Usuario Lander
 Contraseña : 534534

@@ -2,17 +2,17 @@
 <empresa>
     <empleado id="1">
         <nombre>Alosha</nombre>
-        <username>A1o$4a</username>
+        <username>Usuario Alosha</username>
         <password>101010</password>
     </empleado>
     <empleado id="2">
         <nombre>Daniel Chisnenko</nombre>
-        <username>daniElMAQUINA</username>
+        <username>Usuario Dani</username>
         <password>433543</password>
     </empleado>
     <empleado id="3">
         <nombre>Lander</nombre>
-        <username>LAGUEADO</username>
+        <username>Usuario Lander</username>
         <password>534534</password>
     </empleado>
 </empresa>
